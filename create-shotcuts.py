@@ -1,6 +1,6 @@
 from subprocess import call
 
-# Change to 
+# Change to match mate-grid installation path
 mate_grid_path = '/opt/mate-grid/mate-grid.py'
 
 shortcuts = {

@@ -2,7 +2,7 @@
 
 Simple program to move and resize windows with keyboard shortcuts for the mate desktop environment.
 
-Inspired in functionality already present in other desktop environments (like gnome3, unity, kde, etc.) and other programs (like [spectacle](http://spectacleapp.com/) or [SizeUp](http://www.irradiatedsoftware.com/sizeup/) for Mac OS X) this little program brings to the mate desktop environment the ability to handle window position and size with keyboard shortcuts.
+Inspired in functionality already present in other desktop environments (like gnome3, unity, kde, etc.) and other programs (like [spectacle](http://spectacleapp.com/) or [SizeUp](http://www.irradiatedsoftware.com/sizeup/) for Mac OS X) this little program brings to the mate desktop environment the ability to move windows between monitors and resize them to occupy any half or quarter of the current monitor.
 
 ## Requirements
 
@@ -34,7 +34,7 @@ If you cloned the repository in a route other than /opt/mate-grid, edit the file
 
 Run:
     
-    python /opt/create-shortcuts.py
+    python /opt/mate-grid/create-shortcuts.py
 
 or
 
