@@ -5,12 +5,12 @@ mate_grid_path = '/opt/mate-grid/mate-grid.py'
 
 shortcuts = {
     'mate-grid-move-next-mon': {
-        'name': 'Move window to next Monitor', 
+        'name': 'Move window to next Monitor',
         'action': 'python {} -cm'.format(mate_grid_path),
         'binding': '<Shift><Mod4>Right'
     },
     'mate-grid-move-prev-mon': {
-        'name': 'Move window to previous Monitor', 
+        'name': 'Move window to previous Monitor',
         'action': 'python {} -cm'.format(mate_grid_path),
         'binding': '<Shift><Mod4>Left'
     },
@@ -59,10 +59,11 @@ shortcuts = {
 for key_container, params in shortcuts.iteritems():
     for key, value in params.iteritems():
         command = ['gsettings', 'set',
-            'org.mate.control-center.keybinding:/org/mate/desktop/keybindings/{}/'.format(key_container),
-            key,
-            '"{}"'.format(value)
-        ]
-        call (command)
+                   'org.mate.control-center.keybinding:\
+                   /org/mate/desktop/keybindings/{}/'.format(key_container),
+                   key,
+                   '"{}"'.format(value)
+                   ]
+        call(command)
         # Debug.
-        #print " ".join(command)
+        # print " ".join(command)
