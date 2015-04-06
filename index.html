@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mate-grid by xoner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Mate-grid</h1>
+      <h2 class="project-tagline">Utility for resizing and move windows in the mate desktop environment</h2>
+      <a href="https://github.com/xoner/mate-grid" class="btn">View on GitHub</a>
+      <a href="https://github.com/xoner/mate-grid/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/xoner/mate-grid/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="mate-grid" class="anchor" href="#mate-grid" aria-hidden="true"><span class="octicon octicon-link"></span></a>mate-grid</h1>
+
+<p>Simple program to move and resize windows with keyboard shortcuts for the mate desktop environment.</p>
+
+<p>Inspired in functionality already present in other desktop environments (like gnome3, unity, kde, etc.) and other programs (like <a href="http://spectacleapp.com/">spectacle</a> or <a href="http://www.irradiatedsoftware.com/sizeup/">SizeUp</a> for Mac OS X) this little program brings to the mate desktop environment the ability to move windows between monitors and resize them to occupy any half or quarter of the current monitor.</p>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<h3>
+<a id="ubuntu-packages" class="anchor" href="#ubuntu-packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ubuntu packages</h3>
+
+<ul>
+<li>xdotool</li>
+</ul>
+
+<h3>
+<a id="python-dependencies" class="anchor" href="#python-dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python dependencies</h3>
+
+<ul>
+<li>
+<a href="http://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>, install it via <code>sudo apt-get install python-bs4</code> (preferred) or via pip.</li>
+<li>
+<a href="http://amoffat.github.io/sh/">sh</a>, install it via pip</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Install system packages:</p>
+
+<pre><code>sudo apt-get install xdotool python-bs4 python-setuptools
+</code></pre>
+
+<p>Install python dependencies:</p>
+
+<pre><code>sudo easy_install sh
+</code></pre>
+
+<p>Clone this repository:</p>
+
+<pre><code>cd /opt    
+sudo git clone https://github.com/xoner/mate-grid.git
+</code></pre>
+
+<p>If you cloned the repository in a route other than /opt/mate-grid, edit the file create-shortcuts.py and change the value of the mate_grid_path to match the location of your cloned repository.</p>
+
+<p>Run:</p>
+
+<pre><code>python /opt/mate-grid/create-shortcuts.py
+</code></pre>
+
+<p>or</p>
+
+<pre><code>python /path/to/cloned-repository/create-shortcuts.py 
+</code></pre>
+
+<p>if you cloned your repository in a route other than /opt</p>
+
+<h2>
+<a id="keyboard-shortcuts" class="anchor" href="#keyboard-shortcuts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Keyboard Shortcuts</h2>
+
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd>Super</kbd> + <kbd>←</kbd>
+</td>
+<td>Move window to previous monitor</td>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd>Super</kbd> + <kbd>→</kbd>
+</td>
+<td>Move window to next monitor</td>
+</tr>
+<tr>
+<td>
+<kbd>Super</kbd> + <kbd>←</kbd>
+</td>
+<td>Move window to the left half</td>
+</tr>
+<tr>
+<td>
+<kbd>Super</kbd> + <kbd>→</kbd>
+</td>
+<td>Move window to the right half</td>
+</tr>
+<tr>
+<td>
+<kbd>Ctrl</kbd> + <kbd>Super</kbd> + <kbd>↑</kbd>
+</td>
+<td>Move window to the top half</td>
+</tr>
+<tr>
+<td>
+<kbd>Ctrl</kbd> + <kbd>Super</kbd> + <kbd>↓</kbd>
+</td>
+<td>Move window to the bottom half</td>
+</tr>
+<tr>
+<td>
+<kbd>⇧</kbd> + <kbd>Ctrl</kbd> + <kbd>Super</kbd> + <kbd>↑</kbd>
+</td>
+<td>Move window to the top left</td>
+</tr>
+<tr>
+<td>
+<kbd>⇧</kbd> + <kbd>Ctrl</kbd> + <kbd>Super</kbd> + <kbd>→</kbd>
+</td>
+<td>Move window to the top right</td>
+</tr>
+<tr>
+<td>
+<kbd>⇧</kbd> + <kbd>Ctrl</kbd> + <kbd>Super</kbd> + <kbd>↓</kbd>
+</td>
+<td>Move window to the bottom right</td>
+</tr>
+<tr>
+<td>
+<kbd>⇧</kbd> + <kbd>Ctrl</kbd> + <kbd>Super</kbd> + <kbd>←</kbd>
+</td>
+<td>Move window to the bottom left</td>
+</tr>
+</tbody>
+</table>
+
+<p>You can edit this shortcuts to match your needs in the <strong>Keyboard Shortcuts</strong> section of the mate <strong>Control Center</strong>. They are installed under <strong>Custom Shortcuts</strong>.</p>
+
+<h2>
+<a id="todos" class="anchor" href="#todos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Todos</h2>
+
+<p>This program was developed in a Linux mint 17 mate machine with two monitors attached and only one panel located on the left monitor. There are many use cases that are not contemplated:</p>
+
+<ul>
+<li>[ ] Handle more than two monitors</li>
+<li>[ ] More than one panel in a single monitor</li>
+<li>[ ] Panels present on other monitors</li>
+<li>[ ] The program needs the existence of ~/.config/monitors.xml to know the monitors position and sizes, which is created once the monitor utility from the control center is opened. It should be created automatically if doesn't exist or get this information from other sources.</li>
+<li>[ ] The installation process should be automated via setup.py</li>
+<li>[ ] Better code documentation to adequate to PEP 257.</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/xoner/mate-grid">Mate-grid</a> is maintained by <a href="https://github.com/xoner">xoner</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
